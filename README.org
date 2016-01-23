@@ -1,0 +1,12 @@
+* docker-tiarra
+
+runs tiarra IRC proxy.
+
+** Usage
+
+#+BEGIN_SRC sh
+cp /path/to/your/tiarra.conf ./data/
+docker build -t lurdan/tiarra .
+docker run -d -p 6667:6667 -v $(pwd)/data:/data lurdan/tiarra
+#+END_SRC
+
